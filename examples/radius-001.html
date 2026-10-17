@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Border-Radius Chaos | Fix Gallery | Pixel Perfect</title>
+  <meta name="description" content="A pill button beside a square badge beside a 22px card. Live before-and-after demo with the radius-scale repair, mapped to Guard rule PPG-RADIUS-001.">
+  <link rel="canonical" href="https://pixel-perfect-system.netlify.app/gallery/radius-001.html">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#18231d">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Pixel Perfect">
+  <meta property="og:url" content="https://pixel-perfect-system.netlify.app/gallery/radius-001.html">
+  <meta property="og:title" content="Border-radius chaos — before and after">
+  <meta property="og:description" content="Four different corner radii on one screen. The radius-scale repair, mapped to PPG-RADIUS-001.">
+  <link rel="stylesheet" href="../assets/site.css">
+  <style>
+    .demo-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; }
+    .demo-frame { border: 1px solid var(--rule-strong); background: #fffdf8; }
+    .demo-label { display: block; padding: 10px 14px; border-bottom: 1px solid var(--rule); color: var(--muted); font-family: var(--mono); font-size: 10px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+    .demo-label.after { color: var(--moss); }
+    .demo-stage { padding: 26px; min-height: 340px; }
+    /* BEFORE */
+    .b5-card { padding: 18px; background: white; border: 1px solid #ccc; border-radius: 22px; }
+    .demo-stage .b5-title { margin: 0 0 8px; font-size: 15px; font-weight: 700; }
+    .b5-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+    .b5-btn { padding: 8px 18px; font-size: 12px; color: white; background: #4a4a4a; border: 0; border-radius: 999px; }
+    .b5-badge { padding: 3px 8px; font-size: 10px; font-weight: 700; color: #333; background: #e2e2e2; border-radius: 0; }
+    .b5-avatar { width: 30px; height: 30px; background: #9c9c9c; border-radius: 10px; }
+    .b5-input { padding: 8px 12px; width: 150px; font-size: 12px; border: 1px solid #aab; border-radius: 4px; }
+    /* AFTER */
+    .a5-card { padding: 18px; background: white; border: 1px solid var(--rule-strong); border-radius: 8px; }
+    .demo-stage .a5-title { margin: 0 0 8px; font-family: var(--serif); font-size: 17px; font-weight: 600; color: var(--ink); }
+    .a5-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+    .a5-btn { padding: 8px 18px; font-size: 12px; font-weight: 650; color: var(--paper-light); background: var(--ink); border: 1px solid var(--ink); border-radius: 4px; }
+    .a5-badge { padding: 3px 8px; font-family: var(--mono); font-size: 10px; font-weight: 700; color: var(--ink-soft); background: var(--paper-deep); border-radius: 4px; }
+    .a5-avatar { width: 30px; height: 30px; background: var(--paper-deep); border: 1px solid var(--rule-strong); border-radius: 50%; }
+    .a5-input { padding: 8px 12px; width: 150px; font-family: var(--sans); font-size: 13px; color: var(--ink); border: 1px solid var(--rule-strong); border-radius: 4px; }
+    @media (max-width: 900px) { .demo-pair { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="wordmark" href="../index.html" aria-label="Pixel Perfect home">Pixel <span>Perfect</span></a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="../guard/index.html">Guard Lite</a>
+        <a href="../checks/index.html">Check library</a>
+        <a href="index.html">Fix gallery</a>
+        <a class="nav-buy" href="https://edormon.gumroad.com/l/aecmk?utm_source=pixel-perfect-site&amp;utm_medium=organic&amp;utm_campaign=fix-gallery" rel="noopener">Complete system · $24.99</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content">
+    <header class="page-hero">
+      <div class="wrap">
+        <p class="kicker">Fix gallery · PPG-RADIUS-001</p>
+        <h1>Border-radius chaos.</h1>
+        <p class="hero-lead">A fully rounded pill button sits on a 22px card, next to a completely square badge and a 10px avatar. Four radii, two of them accidental. Corner shape is one of the strongest style signals on a screen &mdash; when it is loud, the UI looks assembled rather than designed. The repair picks a small radius scale and assigns it by component size.</p>
+        <p class="notice">Detection: <a href="../checks/index.html#radius-001">PPG-RADIUS-001 &mdash; corner radius outside the declared set</a>. Simulated before-state; demos by Pixel Perfect.</p>
+      </div>
+    </header>
+
+    <section class="section white">
+      <div class="wrap">
+        <div class="demo-pair" role="img" aria-label="Before and after: four mixed corner radii versus one consistent radius scale">
+          <div class="demo-frame">
+            <span class="demo-label">Before · as generated</span>
+            <div class="demo-stage">
+              <div class="b5-card">
+                <h2 class="b5-title">Invite your team</h2>
+                <div class="b5-row">
+                  <span class="b5-avatar"></span>
+                  <input class="b5-input" type="text" value="teammate@company.com" aria-label="Email address" readonly>
+                  <button class="b5-btn" tabindex="-1" type="button">Send invite</button>
+                  <span class="b5-badge">ADMIN</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="demo-frame">
+            <span class="demo-label after">After · under the contract</span>
+            <div class="demo-stage">
+              <div class="a5-card">
+                <h2 class="a5-title">Invite your team</h2>
+                <div class="a5-row">
+                  <span class="a5-avatar"></span>
+                  <input class="a5-input" type="text" value="teammate@company.com" aria-label="Email address" readonly>
+                  <button class="a5-btn" tabindex="-1" type="button">Send invite</button>
+                  <span class="a5-badge">Admin</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap prose">
+        <h2>Why the agent drifts like this</h2>
+        <p>Radius is bound to vibes: "friendly" pulls 999px, "modern" pulls 22px, "secure" pulls sharp corners. The agent applies the vibe per element instead of choosing one turn language for the whole screen. Mixing pill, square and heavy turns on one card fails at a glance.</p>
+        <h2>The repair</h2>
+        <p>Declare a short radius scale (for example 0 / 4px / 8px / 16px) and assign by component size: inputs and buttons get the small turn, cards get the medium one, oversized displays get the large one, and only avatars and indicators earn the full circle &mdash; deliberately.</p>
+        <h2>Find it in your project</h2>
+        <p>Paste your CSS into <a href="../guard/index.html">Guard Lite</a> with a <code>radii =</code> contract line &mdash; <a href="../checks/index.html#radius-001">PPG-RADIUS-001</a> lists every literal radius outside the set.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <p>Fix gallery &mdash; demos by Pixel Perfect. The "before" panels are simulated, not customer screenshots.</p>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="../index.html">Home</a>
+        <a href="index.html">Fix gallery</a>
+        <a href="../guard/index.html">Guard Lite</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
