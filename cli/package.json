@@ -1,0 +1,43 @@
+{
+  "name": "design-contract-checker",
+  "version": "1.0.0",
+  "description": "Guard Lite: check CSS or HTML text against your declared design contract (colors, fonts, font sizes, spacing, radii). Five stable checks, zero dependencies.",
+  "license": "MIT",
+  "author": "Pixel Perfect <https://pixel-perfect-system.netlify.app/>",
+  "homepage": "https://pixel-perfect-system.netlify.app/guard/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thedollartoolkit-boop/guard-lite.git",
+    "directory": "cli"
+  },
+  "bugs": "https://github.com/thedollartoolkit-boop/guard-lite/issues",
+  "keywords": [
+    "design-system",
+    "design-tokens",
+    "css",
+    "lint",
+    "linting",
+    "checker",
+    "coding-agent",
+    "ai",
+    "guard-lite",
+    "pixel-perfect"
+  ],
+  "type": "commonjs",
+  "main": "lib/engine.js",
+  "bin": {
+    "design-contract-checker": "bin/cli.js"
+  },
+  "files": [
+    "lib/",
+    "bin/",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=14"
+  },
+  "scripts": {
+    "test": "node test/run.js"
+  }
+}

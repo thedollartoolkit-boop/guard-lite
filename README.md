@@ -35,6 +35,14 @@ Full definitions, skip conditions and false-positive guidance: [docs/checks.md](
 </script>
 ```
 
+**Option C — CLI in a terminal (zero dependencies).**
+
+```bash
+npx design-contract-checker --contract design-contract.txt src/styles.css page.html
+```
+
+Exit codes are CI-friendly (`0` clean, `1` violations, `2` usage error); add `--json` for machine-readable findings. See [cli/README.md](cli/README.md).
+
 ## Honest limitations
 
 - Text analysis only: does not execute pasted HTML, load websites or inspect computed styles.
